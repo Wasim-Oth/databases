@@ -48,10 +48,10 @@ for ( let i = 1; i < 6; i++) {
 
         // drop evreything i created to try it again. uncomment  it we i need to use it
 
-// let drop_meetup = "drop DATABASE meetup";
-// let drop_Invitee_table = "drop table Invitee";
-// let drop_Room_table = "drop table Room_table";
-// let drop_Meeting = "drop table Meeting";
+// let drop_meetup = "drop DATABASE IF EXISTS meetup";
+// let drop_Invitee_table = "drop table IF EXISTS Invitee";
+// let drop_Room_table = "drop table IF EXISTS Room_table";
+// let drop_Meeting = "drop table IF EXISTS Meeting";
 
 // function dropDatabaseOrTable (x) {
 //     connection.query(x, (error, results) => {
