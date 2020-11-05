@@ -27,3 +27,9 @@
 // table venue (venue_code primary key, venue_description)
 // table food ( food_code primary key, food_description )
 // table dinner ( dinner_id primary key, dinner_date, member_id foreign key, venue_code foreign key, food_code foreign key)
+
+// relationship between tables
+// 1- The relation between dinner and  members is 1-M because each dinner have one or more members while in members table each member is invited to one dinner. 
+// 2-  the relation between venue and dinner is also 1-1 each venue_code has one dinner AND each dinner has one venue_code.
+// 3-the relation between food and dinner is M-M because each dinner has many food_code AND each food_code has many dinners.
+// so for that we need to create new table dinner_food, this table has the 2 pk from the food and dinner tables as an foreign keys and both keys together are pk for this new table.  
