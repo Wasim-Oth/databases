@@ -8,17 +8,15 @@ async function main(){
     await client.connect();
 
     // insert city
-    const MyCity =  {Name: "Damascus", CountryCode: "SYR", Population : 2079000};
+    const myCity =  {Name: "Damascus", CountryCode: "SYR", Population : 2079000};
     await client.db('world').collection('city').insertOne (MyCity); 
     console.log(`added city`);
 
-
     // Update city
     await client.db('world').collection('city').updateOne (
-        {_id:ObjectId("5fa16dfeb842142a2018030d") },
-        {$set: {Population : 2000000}});
-        console.log('population has changed')
-
+        {_id:ObjectId("5fa16dfeb842142a2018030d") }, 
+        $set: {Population : 2000000}});
+    console.log('population has changed')
 
     // find the updated city by name
     const cityByName= await client.db ('world').collection('city').find({Name: "Damascus"})
