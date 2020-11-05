@@ -11,13 +11,17 @@ const connection = mysql.createConnection ({
 const executeQuery = util.promisify(connection.query.bind(connection));
 
 const insert_values_account  = `
-    insert into account values  ( 101, 1500), (102, 350), (103, 600), (104, 700); 
+    insert into account values 
+    ( 101, 1500), (102, 350),
+    (103, 600), (104, 700); 
      `;
 
 const  insert_values_account_changes = `
-    insert into account_changes values ( 1, 101, 450, '2010-02-23 13:00:00', 'updated'), ( 2, 102, 550, '2020-11-13 15:00:00', 'updated'),
-    ( 3, 103, 1220, '2010-03-01 11:00:00', 'updated'), ( 4, 104, 660, '2010-08-03 17:00:00', 'updated');
-       
+    insert into account_changes values
+    ( 1, 101, 450, '2010-02-23 13:00:00', 'updated'), 
+    ( 2, 102, 550, '2020-11-13 15:00:00', 'updated'),
+    ( 3, 103, 1220, '2010-03-01 11:00:00', 'updated'),
+    ( 4, 104, 660, '2010-08-03 17:00:00', 'updated'); 
     `;
 
 async function seedDatabase () {
